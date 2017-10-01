@@ -1,11 +1,12 @@
 " Vim color file
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
-" https://github.com/tomasr/molokai
+" Author: Luiz Fonseca <eu@luiz.cc>
+" https://github.com/luizfonseca/vim-troid
 "
 " Note: Based on the Monokai theme for TextMate
 " by Wimer Hazenberg and its darker variant
 " by Hamish Stuart Macpherson
+" https://github.com/tomasr/molokai
 "
 
 hi clear
@@ -18,21 +19,24 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="molokai"
-
-if exists("g:molokai_original")
-    let s:molokai_original = g:molokai_original
-else
-    let s:molokai_original = 0
-endif
 
 
+
+let g:colors_name="troid"
+
+" Boolean
 hi Boolean         guifg=#AE81FF
+" Text
 hi Character       guifg=#E6DB74
+
 hi Number          guifg=#AE81FF
+
+" Same as Character above
 hi String          guifg=#E6DB74
+
+
 hi Conditional     guifg=#F92672               gui=bold
-hi Constant        guifg=#AE81FF               gui=bold
+hi Constant        guifg=#ffcf3a               gui=bold
 hi Cursor          guifg=#000000 guibg=#F8F8F0
 hi iCursor         guifg=#000000 guibg=#F8F8F0
 hi Debug           guifg=#BCA3A3               gui=bold
@@ -109,27 +113,15 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 hi TabLineFill     guifg=#1B1D1E guibg=#1B1D1E
 hi TabLine         guibg=#1B1D1E guifg=#808080 gui=none
 
-if s:molokai_original == 1
-   hi Normal          guifg=#F8F8F2 guibg=#272822
-   hi Comment         guifg=#75715E
-   hi CursorLine                    guibg=#3E3D32
-   hi CursorLineNr    guifg=#FD971F               gui=none
-   hi CursorColumn                  guibg=#3E3D32
-   hi ColorColumn                   guibg=#3B3A32
-   hi LineNr          guifg=#BCBCBC guibg=#3B3A32
-   hi NonText         guifg=#75715E
-   hi SpecialKey      guifg=#75715E
-else
-   hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
-   hi Comment         guifg=#7E8E91
-   hi CursorLine                    guibg=#293739
-   hi CursorLineNr    guifg=#FD971F               gui=none
-   hi CursorColumn                  guibg=#293739
-   hi ColorColumn                   guibg=#232526
-   hi LineNr          guifg=#465457 guibg=#232526
-   hi NonText         guifg=#465457
-   hi SpecialKey      guifg=#465457
-end
+hi Normal          guifg=#F8F8F2 guibg=#272822
+hi Comment         guifg=#75715E
+hi CursorLine                    guibg=#3E3D32
+hi CursorLineNr    guifg=#FD971F               gui=none
+hi CursorColumn                  guibg=#3E3D32
+hi ColorColumn                   guibg=#3B3A32
+hi LineNr          guifg=#BCBCBC guibg=#3B3A32
+hi NonText         guifg=#75715E
+hi SpecialKey      guifg=#75715E
 
 "
 " Support for 256-color terminal
